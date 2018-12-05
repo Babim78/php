@@ -1,0 +1,15 @@
+---
+- hosts: debian
+  remote_user: root
+  vars:
+   user: dev
+   domains:
+    - local.dev
+    - marc.org
+  roles:
+   - user
+   - nginx
+   - tools
+  #- docker
+  #- gitlab
+  #- rancher
